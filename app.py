@@ -105,27 +105,27 @@ while True:
     # Check border
     if ball.ycor() > 290 or ball.ycor() < -290:
         ball.dy *= -1
-        # winsound.PlaySound(file_name.wav, winsound.SNDASYNC)
+        winsound.PlaySound('bounce.wav', winsound.SND_ASYNC)
     
     if ball.xcor() > 400: 
         ball.goto(0, 0)
         ball.dx *= -1
         score_a += 1
-        # winsound.PlaySound(file_name.wav, winsound.SNDASYNC)
+        # winsound.PlaySound(file_name.wav, winsound.SND_ASYNC)
 
 
     if ball.xcor() < -400:
         ball.goto(0, 0)
         ball.dx *= -1
         score_b += 1
-        # winsound.PlaySound(file_name.wav, winsound.SNDASYNC)
-        
+        # winsound.PlaySound(file_name.wav, winsound.SND_ASYNC)
+
 
     # Check ball bounce off paddles
     if 350 > ball.xcor() > 340 and (paddle_b.ycor() - 50 < ball.ycor() < paddle_b.ycor() + 50):
         ball.dx *= -1
-        # winsound.PlaySound(file_name.wav, winsound.SNDASYNC)
+        winsound.PlaySound('bounce.wav', winsound.SND_ASYNC)
 
     if -340 > ball.xcor() > -350 and (paddle_a.ycor() - 50 < ball.ycor() < paddle_a.ycor() + 50):
         ball.dx *= -1
-        # winsound.PlaySound(file_name.wav, winsound.SNDASYNC)
+        winsound.PlaySound('bounce.wav', winsound.SND_ASYNC)
