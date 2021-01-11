@@ -111,14 +111,14 @@ while True:
         ball.goto(0, 0)
         ball.dx *= -1
         score_a += 1
-        # winsound.PlaySound(file_name.wav, winsound.SND_ASYNC)
+        winsound.PlaySound('lost.wav', winsound.SND_ASYNC)
 
 
     if ball.xcor() < -400:
         ball.goto(0, 0)
         ball.dx *= -1
         score_b += 1
-        # winsound.PlaySound(file_name.wav, winsound.SND_ASYNC)
+        winsound.PlaySound('lost.wav', winsound.SND_ASYNC)
 
 
     # Check ball bounce off paddles
